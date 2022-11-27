@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Converter</title>
+    <link rel="shortcut icon" type="image/x-icon" href="bank.png"/>
+    <link rel="stylesheet" href="style.css">
+   </head>
+<body>
+    <header>
+        <img src="bank.png" alt="bank">
+        <ul style="list-style:none" class="mainhead">
+            <li>БАНК</li>
+            <li>БИЗНЕС</li>
+            <li>ИНВЕСТИЦИИ</li>
+            <li>СТРАХОВАНИЕ</li>
+            <li>МОБАЙЛ</li>
+            <li>ПУТЕШЕСТВИЯ</li>
+            <li>РАЗВЛЕЧЕНИЯ</li>
+        </ul>
+         <div class="headerRight"> 
+            <div class="comein">Войти</div>
+             <button class="button" ><img src="menu.png"></button>
+             <div class="dropdown-content">
+                <a href="#">БАНК</a>
+                <a href="#">БИЗНЕС</a>
+                <a href="#">ИНВЕСТИЦИИ</a>
+                <a href="#">СТРАХОВАНИЕ</a>
+                <a href="#">МОБАЙЛ</a>
+                <a href="#">ПУТЕШЕСТВИЯ</a>
+                <a href="#">РАЗВЛЕЧЕНИЯ</a>
+
+              </div>
+        </div> 
+    </header>
+    <main>
+        <p class="paragraph">Конвертер валют онлайн</p>
+        <section>
+            <div class="straight side">
+                <p class="title">У меня есть</p>
+                <ul class="exchange">
+                    <li class="default">RUB</li>
+                    <li>USD</li>
+                    <li>AZN</li>
+                    <li>GBP</li>
+                </ul>
+                <div class="card">
+                    <input type="text" oninput="this.value = this.value.replace(/^\./g, '').replace(/^\,/g, '').replace(/[^0-9.,]/g, '').replace(/,/g, '.').replace(/(\..*)\./g, '$1').replace(/^0+/g,'0').replace(/(\..*)0{4}$/g, '$1').replace(/(\.\d{4}).*/g, '$1');">
+                    <p class="currency">1 <span class="from">RUB</span> = <span class="value"></span> <span class="to">USD</span></p>
+                </div>
+            </div>
+            <div class="back side">
+                <p class="title">Хочу приобрести</p>
+                <ul class="exchange">
+                    <li>RUB</li>
+                    <li class="default">USD</li>
+                    <li>AZN</li>
+                    <li>GBP</li>
+                </ul>
+                <div class="card">
+                    <input type="text" oninput="this.value = this.value.replace(/^\./g, '').replace(/^\,/g, '').replace(/[^0-9.,]/g, '').replace(/,/g, '.').replace(/(\..*)\./g, '$1').replace(/^0+/g,'0').replace(/(\..*)0{4}$/g, '$1').replace(/(\.\d{4}).*/g, '$1');">
+                    <p class="currency">1 <span class="from">USD</span> = <span class="value"></span> <span class="to">RUB</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="main.js" defer></script>
+</body>
+</html>

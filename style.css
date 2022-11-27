@@ -1,0 +1,309 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    width: 100vw;
+    height: 100vh;
+}
+header {
+    display: flex;
+    background-color: #F5F5F6;
+    padding: 0 100px 0 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exchange {
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    color: black;
+    cursor: default;
+    list-style: none;
+    border-collapse: collapse;
+    font-weight: 400;
+}
+
+
+main {
+    padding: 0 5%;
+}
+.headerRight {
+    display: flex;
+}
+
+
+i {
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.mainhead {
+    display: none;
+    flex-direction: row;
+    font-size: 14px;
+    font-weight: 500;
+    color: #959BA4;
+    margin: 0 0 0 3%;
+    
+}
+
+.mainhead li {
+    margin: 0 40px 0 0;
+    cursor: pointer;
+}
+.mainhead li:hover {
+    text-decoration: overline;
+    color: gray;
+}
+.paragraph {
+    margin: 40px auto 30px auto;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    user-select: none;
+}
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8%;
+}
+
+.side {
+    font-size: 18px;
+    width: 350px;
+    
+}
+
+.exchange .default {
+    background-color: #833AE0;
+    border: 1px solid #833AE0;
+    color: white;
+}
+.exchange li {
+    text-align: center;
+    line-height: 270%;
+    width: 25%;
+    height: 50px;
+    border: 1px solid #E5E5E5;
+    cursor: pointer;
+    
+}
+
+.exchange li:first-child {
+    border-radius: 5px 0 0 5px;
+}
+.exchange li:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: rgb(24, 24, 24);
+    font-size: 18px;
+    line-height: 30px;
+    background-color: rgb(252, 252, 252);
+    padding: 4%;
+    opacity: 0;
+    pointer-events: none;
+    width: 180px;
+    margin-left: auto;
+    margin-right: 5px;
+    left: 0;
+    right: 0;
+    text-align: right;
+    box-shadow: 0 0 8px darkgray;
+    border-radius: 10px;
+}
+
+
+.card {
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    margin: 20px 0 0 0;
+    padding: 10px;
+}
+
+input {
+    outline: none;
+    border: 0;
+}
+.card input {
+    font-size: 30px;
+    font-weight: 300;
+    width: 100%;
+}
+.currency {
+    margin: 30px 0 0 0;
+    color: #C6C6C6;
+}
+.title {
+    margin: 0 0 10px 0;
+    color: #9F9F9F;
+}
+.comein{
+    font-weight: 500;
+    font-size: 16px;
+    height: 35px;
+    width: 60px;
+    background-color: #833AE0;
+    color: #fffbfb;
+    margin: 0 20px 0 0;
+    border-radius: 5px;
+    line-height: 220%;
+    text-align: center;
+    float: right;
+    user-select: none;
+}
+
+.dropdown-content{
+    display: none;
+}
+
+
+@media screen and (max-width: 425px) {
+    header {
+        padding: 2% 7%;
+    }
+    .i{
+        display: flex;
+        margin-right: 300px;
+    }
+    .button img{
+        display: flex;
+    }
+
+    
+
+
+}
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    header {
+        padding: 3% 6%;
+    }
+    .mainhead {
+        display: none;
+    }
+
+    .comein{
+        display: flex;
+       padding-left: 15px;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .headerRight:hover .dropdown-content {display: block;}
+      
+      .headerRight {
+        position: relative;
+        display: inline-block;
+      }
+      .button{
+        width: 22%;
+        margin-right: 7px;
+        margin-top: 3px;
+        border:white ;
+
+      }
+      
+    .button  img{
+        display: flex;
+        padding-right: 10px;
+        
+        width: 35px;
+        
+    }
+    button img:hover + .menu {
+        display: flex;
+        
+        transform: translateY(50px);
+        opacity: 1;
+        
+       
+    
+      }
+
+}
+@media screen and (min-width: 768px) {
+    i, .menu {
+        display: none ;
+    }
+    .mainhead {
+        display: flex;
+    }
+    header {
+        padding: 0.5% 5%;
+    }
+    .button img{
+        display: none;
+    }
+    
+    .comein{
+        margin: 0 0 0 0;
+    }
+}
+@media screen and (max-width: 940px) {
+    .mainhead {
+        font-size: 12px;
+    }
+    .mainhead li {
+        margin: 0 15px 0 0;
+    }
+    .comein{
+        font-size: 15px;
+        line-height: 250%;
+    }
+}
+@media screen and (max-width: 860px) {
+    .mainhead {
+        font-size: 10px;
+    }
+    .comein{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 850px) {
+    .side {
+        font-size: 16px;
+        width: 300px;
+    }
+    .exchange li {
+        height: 45px;
+    }
+    .paragraph {
+        font-size: 45px;
+    }
+}
+@media screen and (max-width: 725px) {
+    .side {
+        font-size: 14px;
+        width: 250px;
+    }
+    .exchange li {
+        height: 40px;
+    }
+    .paragraph {
+        font-size: 40px;
+    }
+}
